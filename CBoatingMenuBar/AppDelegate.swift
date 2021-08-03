@@ -112,8 +112,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
     }
 
-    @IBAction func menuClicked(_ sender: NSMenuItem) {
-        let url = URL(string: "http://www.community-boating.org");
+    @IBAction func openWeatherPage(_ sender: NSMenuItem) {
+        let url = URL(string: "https://www.community-boating.org/about-us/weather-information/");
 		NSWorkspace.shared.open(url!)
     }
     

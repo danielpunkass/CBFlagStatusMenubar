@@ -670,10 +670,10 @@
         </menu>
         <menu id="O8q-1P-SU8">
             <items>
-                <menuItem title="Open CBI Web Site" id="q0P-ee-UY6">
+                <menuItem title="Open CBI Weather Page" id="q0P-ee-UY6">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="menuClicked:" target="Voe-Tx-rLC" id="f8n-H3-JJa"/>
+                        <action selector="openWeatherPage:" target="Voe-Tx-rLC" id="zCJ-aC-3dY"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="DD8-0i-CbP">
