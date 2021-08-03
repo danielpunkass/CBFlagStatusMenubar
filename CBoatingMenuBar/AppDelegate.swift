@@ -77,6 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 #if DEBUG
+		self.statusMenu.items.append(NSMenuItem.separator())
 		for flagStatus in ["R", "G", "Y", "C"] {
 			self.statusMenu.addItem(withTitle: "Simulate \(flagStatus) Status", action: #selector(simulateStatus(_:)), keyEquivalent: "")
 			self.statusMenu.items.last?.representedObject = flagStatus
