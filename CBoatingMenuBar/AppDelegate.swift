@@ -24,9 +24,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	let statusItem = NSStatusBar.system.statusItem(withLength: -1)
 	var flagColor: NSColor = .black {
 		didSet {
-			self.statusItem.image = NSImage(size: NSSize(width: 32, height: 32), flipped: false, drawingHandler: { rect in
+			self.statusItem.image = NSImage(size: NSSize(width: 20, height: 16), flipped: false, drawingHandler: { rect in
+				let flagPath = NSBezierPath()
+
+				let insetAmount = 2.0
+				let targetRect = rect.insetBy(dx: insetAmount, dy: insetAmount)
+				let bottomLeftPoint = CGPoint(x: targetRect.minX, y: targetRect.minY)
+				let topLeftPoint = CGPoint(x: targetRect.minX, y: targetRect.maxY)
+				let middleRightPoint = CGPoint(x: targetRect.maxX, y: targetRect.midY)
+
+				flagPath.move(to: bottomLeftPoint)
+				flagPath.line(to: topLeftPoint)
+				flagPath.line(to: middleRightPoint)
+				flagPath.close()
+
 				self.flagColor.setFill()
-				rect.fill()
+				flagPath.fill()
+
+				NSColor.labelColor.setStroke()
+				flagPath.lineWidth = 1.0
+				flagPath.stroke()
+
 				return true
 			})
 		}
@@ -34,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var flagStatus = FlagStatus.closed {
 		didSet {
 			switch self.flagStatus {
-				case .closed: self.flagColor = .black
+				case .closed: self.flagColor = .clear
 				case .green: self.flagColor = .green
 				case .yellow: self.flagColor = .yellow
 				case .red: self.flagColor = .red
@@ -51,12 +69,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 #endif
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		#if DEBUG
+#if DEBUG
 		for flagStatus in ["R", "G", "Y", "C"] {
 			self.statusMenu.addItem(withTitle: "Simulate \(flagStatus) Status", action: #selector(simulateStatus(_:)), keyEquivalent: "")
 			self.statusMenu.items.last?.representedObject = flagStatus
 		}
-		#endif
+#endif
 
 		self.statusItem.menu = self.statusMenu;
 
