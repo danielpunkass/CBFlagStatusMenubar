@@ -263,8 +263,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CBoatingMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0b1;
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blancotech.CBoatingMenuBar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.punkitup.cbimenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
@@ -280,7 +282,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CBoatingMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blancotech.CBoatingMenuBar;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0b1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.punkitup.cbimenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;

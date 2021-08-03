@@ -15,6 +15,13 @@ enum FlagStatus : String {
 	case red = "R"
 }
 
+extension NSColor.Name {
+	static let greenFlag = "GreenFlag"
+	static let yellowFlag = "YellowFlag"
+	static let redFlag = "RedFlag"
+	static let closedFlag = "ClosedFlag"
+}
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -52,10 +59,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var flagStatus = FlagStatus.closed {
 		didSet {
 			switch self.flagStatus {
-				case .closed: self.flagColor = .clear
-				case .green: self.flagColor = .green
-				case .yellow: self.flagColor = .yellow
-				case .red: self.flagColor = .red
+				case .closed: self.flagColor = NSColor(named: .closedFlag)!
+				case .green: self.flagColor = NSColor(named: .greenFlag)!
+				case .yellow: self.flagColor = NSColor(named: .yellowFlag)!
+				case .red: self.flagColor = NSColor(named: .redFlag)!
 			}
 		}
 	}
