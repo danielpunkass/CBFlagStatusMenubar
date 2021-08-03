@@ -22,23 +22,42 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     
 	let statusItem = NSStatusBar.system.statusItem(withLength: -1)
+	var flagColor: NSColor = .black {
+		didSet {
+			self.statusItem.image = NSImage(size: NSSize(width: 32, height: 32), flipped: false, drawingHandler: { rect in
+				self.flagColor.setFill()
+				rect.fill()
+				return true
+			})
+		}
+	}
 	var flagStatus = FlagStatus.closed {
 		didSet {
-			let imageName: String
-
 			switch self.flagStatus {
-				case .closed: imageName = "closeFlag"
-				case .green: imageName = "greenFlag"
-				case .yellow: imageName = "yellowFlag"
-				case .red: imageName = "redFlag"
+				case .closed: self.flagColor = .black
+				case .green: self.flagColor = .green
+				case .yellow: self.flagColor = .yellow
+				case .red: self.flagColor = .red
 			}
-
-			self.statusItem.image = NSImage(named: imageName)
 		}
 	}
 
-	
+#if DEBUG
+	@objc func simulateStatus(_ sender: NSMenuItem) {
+		if let statusString = sender.representedObject as? String, let status = FlagStatus(rawValue: statusString) {
+			self.flagStatus = status
+		}
+	}
+#endif
+
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
+		#if DEBUG
+		for flagStatus in ["R", "G", "Y", "C"] {
+			self.statusMenu.addItem(withTitle: "Simulate \(flagStatus) Status", action: #selector(simulateStatus(_:)), keyEquivalent: "")
+			self.statusMenu.items.last?.representedObject = flagStatus
+		}
+		#endif
+
 		self.statusItem.menu = self.statusMenu;
 
 		updateFlag();

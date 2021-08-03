@@ -263,6 +263,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CBoatingMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blancotech.CBoatingMenuBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
