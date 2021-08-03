@@ -13,7 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65C6DE321CFE84C000D8E482 /* CBoatingMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBoatingMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C6DE321CFE84C000D8E482 /* CBI Flag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CBI Flag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C6DE351CFE84C000D8E482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C6DE371CFE84C000D8E482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C6DE3A1CFE84C000D8E482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		65C6DE331CFE84C000D8E482 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65C6DE321CFE84C000D8E482 /* CBoatingMenuBar.app */,
+				65C6DE321CFE84C000D8E482 /* CBI Flag.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65C6DE311CFE84C000D8E482 /* CBoatingMenuBar */ = {
+		65C6DE311CFE84C000D8E482 /* CBI Flag */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65C6DE3F1CFE84C000D8E482 /* Build configuration list for PBXNativeTarget "CBoatingMenuBar" */;
+			buildConfigurationList = 65C6DE3F1CFE84C000D8E482 /* Build configuration list for PBXNativeTarget "CBI Flag" */;
 			buildPhases = (
 				65C6DE2E1CFE84C000D8E482 /* Sources */,
 				65C6DE2F1CFE84C000D8E482 /* Frameworks */,
@@ -73,9 +73,9 @@
 			);
 			dependencies = (
 			);
-			name = CBoatingMenuBar;
+			name = "CBI Flag";
 			productName = CBoatingMenuBar;
-			productReference = 65C6DE321CFE84C000D8E482 /* CBoatingMenuBar.app */;
+			productReference = 65C6DE321CFE84C000D8E482 /* CBI Flag.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +107,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65C6DE311CFE84C000D8E482 /* CBoatingMenuBar */,
+				65C6DE311CFE84C000D8E482 /* CBI Flag */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65C6DE3F1CFE84C000D8E482 /* Build configuration list for PBXNativeTarget "CBoatingMenuBar" */ = {
+		65C6DE3F1CFE84C000D8E482 /* Build configuration list for PBXNativeTarget "CBI Flag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65C6DE401CFE84C000D8E482 /* Debug */,
